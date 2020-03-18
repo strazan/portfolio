@@ -1,0 +1,19 @@
+{
+  "name": "sigge-labor-portfolio",
+  "version": "1.0.0",
+  "description": "this is the portfolio of the famous multidisciplinary young living legend sigge labor ",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^9.3.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "storyblok-js-client": "^2.1.0"
+  }
+}
