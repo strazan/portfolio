@@ -23,3 +23,5 @@ pids
 # Environment
 .env
 .env.*
+
+README.md
