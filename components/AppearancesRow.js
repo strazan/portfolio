@@ -1,12 +1,9 @@
+import style from './style/AppearancesRow.module.scss'
+
 const AppearancesRow = ({ block }) => {
   return (
-    <div className="AppearancesRow">
+    <div className={style.root}>
       <p>{`${block.date}. ${block.copy}`}</p>
-      <style jsx>{`
-        .AppearancesRow {
-          background-color: #ddd;
-        }
-      `}</style>
     </div>
   )
 }

@@ -11,13 +11,20 @@ const AboutPage = props => {
 
   return (
     <Layout>
-      <h1 className="title">this is abost me</h1>
+      <h1 className="title">this is about me</h1>
+      <br />
+      <h3>appearances</h3>
       {block.map(appearances => {
         return <AppearancesRow key={appearances._uid} block={appearances} />
       })}
       <style jsx>{`
-        h1 {
-          color: #fff;
+        h1,
+        h3 {
+          color: #fe1;
+        }
+        h3 {
+          font-size: 1.5rem;
+          padding-bottom: 1rem;
         }
       `}</style>
     </Layout>
