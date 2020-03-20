@@ -1,9 +1,10 @@
 import Layout from '../components/Layout'
+import LiquidArt from '../components/LiquidArt'
 
 const IndexPage = () => {
   return (
     <Layout>
-      <h1>this is a very good home page</h1>
+      <LiquidArt />
     </Layout>
   )
 }

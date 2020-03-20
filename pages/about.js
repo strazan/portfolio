@@ -20,7 +20,7 @@ const AboutPage = props => {
       <style jsx>{`
         h1,
         h3 {
-          color: #fe1;
+          color: #224;
         }
         h3 {
           font-size: 1.5rem;
@@ -30,9 +30,9 @@ const AboutPage = props => {
     </Layout>
   )
 }
-AboutPage.getInitialProps = async () => {
+export const getServerSideProps = async () => {
   const data = await fetcher(`${url}/api/page/about`)
-  return { data }
+  return { props: { data } }
 }
 
 export default AboutPage

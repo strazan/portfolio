@@ -5,16 +5,16 @@
       li {
         padding: 0.5rem 2rem;
         font-size: 1.5rem;
-        color: #fff;
+        color: #224;
         a:hover {
           text-decoration: line-through;
         }
         &:first-child {
           padding-left: 0;
         }
-        .activePage {
-          text-decoration: line-through;
-          color: #ff0;
+        &:nth-child(2) {
+          padding-left: 0;
+          margin-left: auto;
         }
       }
       .projects {
