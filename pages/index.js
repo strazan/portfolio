@@ -1,10 +1,12 @@
 import Layout from '../components/Layout'
-import LiquidArt from '../components/LiquidArt'
+import MeHero from '../components/MeHero'
+import FeaturedProjects from '../components/FeaturedProjects'
 
 const IndexPage = () => {
   return (
     <Layout>
-      <LiquidArt />
+      <MeHero />
+      <FeaturedProjects />
     </Layout>
   )
 }

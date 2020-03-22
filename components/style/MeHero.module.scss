@@ -1,0 +1,120 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-size: cover;
+  background: #fff;
+  background-position: center center;
+  height: 100vh;
+
+  .flowingText,
+  .flowingTextR {
+    color: #ff4438;
+    font-size: 10vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  .flowingText {
+    margin-top: 25vh;
+    animation: textflow 40s linear infinite;
+  }
+  .flowingTextR {
+    animation: textflowr 50s linear infinite;
+  }
+  .scrolldown {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100px;
+    height: 120px;
+    z-index: 4;
+    text-align: center;
+
+    .scrolldownText {
+      position: relative;
+      overflow: hidden;
+      height: 1.5rem;
+      margin-bottom: 0.5rem;
+      p {
+        width: 100%;
+        color: #ff4438;
+        font-style: italic;
+        animation: scrollText 3s linear infinite;
+      }
+    }
+    .scrolldownLine {
+      width: 1px;
+      height: 90px;
+      margin: 0 auto;
+      position: relative;
+
+      .line {
+        width: 100%;
+        height: 100%;
+        background: #ff4438;
+        animation: scrollLine 3s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateY(-100%);
+  }
+  10% {
+    transform: translateY(-100%);
+  }
+  30% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(0%);
+  }
+  90% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: scaleY(0);
+  }
+  10% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  30% {
+    transform: scaleY(1);
+  }
+  70% {
+    transform: scaleY(1);
+  }
+  90% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes textflow {
+  0% {
+  }
+  100% {
+    transform: translateX(200vw);
+  }
+}
+@keyframes textflowr {
+  0% {
+  }
+  100% {
+    transform: translateX(-200vw);
+  }
+}
