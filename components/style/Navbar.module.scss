@@ -1,20 +1,46 @@
 .root {
+  position: fixed;
+  margin: auto;
+  width: 100vw;
   nav {
+    max-width: 1100px;
+
+    margin: auto;
     ul {
       display: flex;
       li {
         padding: 0.5rem 2rem;
         font-size: 1.5rem;
-        color: #224;
-        a:hover {
-          text-decoration: line-through;
+        color: #ff4438;
+        font-weight: 300;
+        a {
+          display: inline-block;
+          position: relative;
+        }
+        a::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 1px;
+          bottom: 40%;
+          left: 0;
+          background-color: #000;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+        a:hover::before {
+          transform: scaleX(1);
+          transform-origin: bottom left;
         }
         &:first-child {
           padding-left: 0;
         }
         &:nth-child(2) {
-          padding-left: 0;
           margin-left: auto;
+        }
+        &:nth-child(3) {
+          padding-right: 0;
         }
       }
       .projects {
