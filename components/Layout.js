@@ -5,10 +5,12 @@ import Navbar from './NavBar'
 
 const Layout = ({ children }) => {
   return (
-    <div className={style.Layout}>
+    <div>
       <Head title="siggeme" />
       <Navbar />
-      <main>{children}</main>
+      <div className={style.Layout}>
+        <main>{children}</main>
+      </div>
     </div>
   )
 }

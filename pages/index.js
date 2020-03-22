@@ -3,6 +3,7 @@ import { fetcher, url } from '../utils/util'
 import Layout from '../components/Layout'
 import MeHero from '../components/MeHero'
 import FeaturedProject from '../components/FeaturedProject'
+import MainContent from '../components/MainContent'
 
 const IndexPage = props => {
   const {
@@ -15,39 +16,38 @@ const IndexPage = props => {
   return (
     <Layout>
       <MeHero />
-      <div className="featuredIntro">
-        <p>Here are some of my recent projects.</p>
-      </div>
-      <div className="FeaturedProjectsGrid">
-        <div className="column" style={{ paddingTop: '4rem' }}>
-          {block[0].columnOne.map(feat => {
-            return <FeaturedProject key={feat._uid} blok={feat} />
-          })}
+      <MainContent>
+        <div className="featuredIntro">
+          <p>Here are some of my recent projects.</p>
         </div>
-        <div className="column">
-          {block[0].columnTwo.map(feat => {
-            return <FeaturedProject key={feat._uid} blok={feat} />
-          })}
+        <div className="FeaturedProjectsGrid">
+          <div className="column" style={{ paddingTop: '4rem' }}>
+            {block[0].columnOne.map(feat => {
+              return <FeaturedProject key={feat._uid} blok={feat} />
+            })}
+          </div>
+          <div className="column">
+            {block[0].columnTwo.map(feat => {
+              return <FeaturedProject key={feat._uid} blok={feat} />
+            })}
+          </div>
         </div>
-      </div>
-      <div className="moreProjects">
-        <p>All projects --> </p>
-      </div>
+        <div className="moreProjects">
+          <p>All projects --> </p>
+        </div>
+      </MainContent>
 
       <style jsx>{`
         .featuredIntro,
         .moreProjects {
           width: 100%;
-          padding: 10vh 40vw;
+          padding: 10vh 20vw 10vh 40vw;
         }
         .featuredIntro p {
           width: 10rem;
         }
         .FeaturedProjectsGrid {
           display: flex;
-          width: 90vw;
-          margin: auto;
-          max-width: 1100px;
         }
         .column {
           width: 50%;
