@@ -12,7 +12,6 @@ const IndexPage = props => {
     }
   } = props
 
-  console.log(block)
   return (
     <Layout>
       <MeHero />
