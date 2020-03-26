@@ -1,3 +1,4 @@
+import style from './page.module.scss'
 import { fetcher, url } from '../../utils/util'
 
 import Layout from '../../components/Layout'
@@ -8,17 +9,19 @@ const ProjectPage = ({ data }) => {
   return (
     <Layout>
       <MainContent>
-        <h1>{content.projectName}</h1>
-        <h2>{content.projectSubTitle}</h2>
+        <div className={style.intro}>
+          <h1 className={style.name}>{content.projectName}</h1>
+          <h2 className={style.subTitle}>{content.projectSubTitle}</h2>
+        </div>
       </MainContent>
+      <div
+        className={style.moneyshot}
+        style={{ backgroundColor: content.moneyshotColor }}
+      ></div>
     </Layout>
   )
 }
 
-// export const getServerSideProps = async () => {
-//   const data = await fetcher(`${url}/api/page/work/the-last-christmas`)
-//   return { props: { data } }
-// }
 ProjectPage.getInitialProps = async ({ query }) => {
   const { page } = query
   const data = await fetcher(`${url}/api/page/work/${page}`)

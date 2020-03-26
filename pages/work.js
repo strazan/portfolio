@@ -11,10 +11,18 @@ const WorkPage = props => {
   return (
     <Layout>
       <MainContent>
-        {stories.map(project => {
-          return <ProjectCard key={project.id} blok={project} />
-        })}
+        <div className="root">
+          {stories.map(project => {
+            return <ProjectCard key={project.id} blok={project} />
+          })}
+        </div>
       </MainContent>
+      <style jsx>{`
+        .root {
+          display: flex;
+          padding: 10vh 0;
+        }
+      `}</style>
     </Layout>
   )
 }
