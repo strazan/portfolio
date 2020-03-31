@@ -1,0 +1,32 @@
+@import '../../base/index.scss';
+
+.root {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .image {
+    width: 20vw;
+    max-width: 400px;
+    min-width: 200px;
+    padding-bottom: $padding1;
+
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      object-fit: cover;
+      max-height: 60vh;
+      max-width: none;
+      min-width: none;
+    }
+  }
+  .name {
+    @include fontSizeLarge;
+  }
+  .role {
+    margin-top: -$MagicNumber3;
+    color: #aaa;
+    font-weight: 300;
+    font-size: $fontSizeLarge;
+  }
+}

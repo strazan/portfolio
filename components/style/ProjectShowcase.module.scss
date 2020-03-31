@@ -1,0 +1,39 @@
+@import '../../base/index.scss';
+.root {
+  @include maxWidthContainer;
+
+  display: flex;
+  padding-top: $MagicNumber;
+  padding-bottom: $MagicNumber * 2;
+
+  .mockup {
+    width: 55%;
+  }
+
+  .info {
+    padding: $MagicNumber * 2 0 0 $MagicNumber * 2;
+
+    .description {
+      @include fontSizeNormal;
+      color: $colorGray;
+      padding-bottom: $MagicNumber / 1.25;
+    }
+
+    .infoSection {
+      .title {
+        @include fontSizeNormalFat;
+        color: $colorBlack;
+        text-transform: uppercase;
+      }
+      .copy {
+        @include fontSizeNormal;
+        color: $colorGray;
+      }
+      padding-bottom: $MagicNumber / 1.5;
+    }
+
+    .link {
+      @include fontSizeNormal;
+    }
+  }
+}

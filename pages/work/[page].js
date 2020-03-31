@@ -3,21 +3,15 @@ import { fetcher, url } from '../../utils/util'
 
 import Layout from '../../components/Layout'
 import MainContent from '../../components/MainContent'
+import DevWork from '../../components/DevWork'
 
 const ProjectPage = ({ data }) => {
   const { content } = data
+  console.log(content)
+
   return (
     <Layout>
-      <MainContent>
-        <div className={style.intro}>
-          <h1 className={style.name}>{content.projectName}</h1>
-          <h2 className={style.subTitle}>{content.projectSubTitle}</h2>
-        </div>
-      </MainContent>
-      <div
-        className={style.moneyshot}
-        style={{ backgroundColor: content.moneyshotColor }}
-      ></div>
+      <DevWork content={content} />
     </Layout>
   )
 }
