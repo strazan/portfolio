@@ -13,7 +13,7 @@ const IndexPage = props => {
   } = props
 
   return (
-    <Layout>
+    <Layout settings={{ noMarginTop: true }}>
       <MeHero />
       <MainContent>
         <div className="featuredIntro">
