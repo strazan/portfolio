@@ -1,0 +1,20 @@
+$MagicNumber: 60px;
+$MagicNumber2: 45px;
+$MagicNumber3: 30px;
+$MagicNumber4: 20px;
+$MagicNumber5: 15px;
+$MagicNumber6: 10px;
+
+$padding1: $MagicNumber;
+$padding2: $MagicNumber/2;
+
+@mixin maxWidthContainer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2vw;
+
+  //   @media screen and (max-width: ) {
+
+  //   }
+}
