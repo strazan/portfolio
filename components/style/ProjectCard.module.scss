@@ -1,5 +1,7 @@
+@import '../../base/index.scss';
+
 .root {
   width: 400px;
   height: 400px;
-  border: 1px dotted #ff4438;
+  border: 1px dotted $colorRed;
 }
