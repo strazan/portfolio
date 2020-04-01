@@ -23,23 +23,13 @@ const MeHero = props => {
   }, [])
   return (
     <div className={style.root}>
-      <h1 className={style.flowingText}>
-        my name is sigge. my name is sigge. my name is sigge. my name is sigge.
-        my name is sigge. my name is sigge. my name is sigge. my name is sigge.
-        my name is sigge. my name is sigge. my name is sigge. my name is sigge.
-        my name is sigge. my name is sigge. my name is sigge. my name is sigge.
-        my name is sigge. my name is sigge. my name is sigge. my name is sigge.
-        my name is sigge. my name is sigge. my name is sigge. my name is sigge.{' '}
-      </h1>
-      <h1 className={style.flowingTextR}>
-        i do design, development, photography, filmmaking. i do design,
-        development, photography, filmmaking. i do design, development,
-        photography, filmmaking. i do design, development, photography,
-        filmmaking. i do design, development, photography, filmmaking. i do
-        design, development, photography, filmmaking. i do design, development,
-        photography, filmmaking.
-      </h1>
-
+      <div className={style.heroTextWrapper}>
+        <div className={style.heroText}>
+          <h1 className={style.title}>MY NAME IS SIGGE</h1>
+          <h1 className={style.titleFilled}>I AM HACKER</h1>
+          <h1 className={style.title}>ALSO AM PHOTOGRAPHER</h1>
+        </div>
+      </div>
       <div ref={scroll} className={style.scrolldown}>
         <div className={style.scrolldownText}>
           <p>scroll down</p>
@@ -49,6 +39,7 @@ const MeHero = props => {
           <div className={style.line}></div>
         </div>
       </div>
+      {/* </div> */}
 
       {/* <div className="projects"><ProjectCardVertical /></div> */}
     </div>
