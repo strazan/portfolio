@@ -1,8 +1,16 @@
+@import url('https://rsms.me/inter/inter.css');
+
 $fontSizeNormal: 18px;
 $fontSizeLarge: 22px;
 $fontSize4XL: 108px;
 
 @mixin fontSizeLarge {
+  font-size: $fontSizeLarge;
+  //   @media screen and (max-width: 1200px) {
+  //     font-size: 9vw;
+  //   }
+}
+@mixin fontSize4XL {
   font-size: $fontSize4XL;
   @media screen and (max-width: 1200px) {
     font-size: 9vw;
@@ -22,4 +30,11 @@ $fontSize4XL: 108px;
   //   @media screen and (max-width: 1200px) {
   //     font-size: 2vw;
   //   }
+}
+
+@mixin interFont {
+  font-family: 'Inter', sans-serif;
+  @supports (font-variation-settings: normal) {
+    font-family: 'Inter var', sans-serif;
+  }
 }

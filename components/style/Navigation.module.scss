@@ -1,0 +1,138 @@
+@import '../../base/index.scss';
+
+.root {
+  .footerNav {
+    background-color: #fff;
+    bottom: 0;
+    border-top: 2px solid $colorRed;
+    position: fixed;
+    transition: transform 300ms;
+    width: 100vw;
+    z-index: 10;
+
+    ul {
+      display: flex;
+      li {
+        @include fontSizeLarge;
+        height: $MagicNumber;
+        text-align: center;
+        flex-grow: 1;
+
+        button {
+          @include fontSizeLarge;
+          font-weight: 600;
+          color: $colorRed;
+          border: none;
+          background-color: transparent;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            bottom: 0;
+            height: 0;
+            width: 100%;
+            background: $colorRed;
+            transition: all 300ms;
+          }
+          &:hover {
+            color: $colorWhite;
+            transition: all 300ms;
+            &::after {
+              height: 100%;
+            }
+          }
+          // &::after
+        }
+      }
+      .menuButton {
+        max-width: 30%;
+        border-right: 2px solid $colorRed;
+      }
+    }
+  }
+
+  .navigationMenuWrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $colorWhite;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    nav {
+      ul {
+        li {
+          text-align: center;
+          a {
+            @include interFont;
+            color: transparent;
+            background-position: 0 0;
+            font-size: 12vw;
+            line-height: 1;
+            font-weight: 600;
+            color: transparent;
+            transition: all 600ms;
+            -webkit-text-stroke: 2px $colorRed;
+            background-image: -webkit-linear-gradient(
+              top,
+              $colorWhite 50%,
+              $colorRed 0
+            );
+            background-size: 100% 200%;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            &:hover {
+              background-position: 0 100%;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .closeButton {
+      position: absolute;
+      bottom: $MagicNumber * 2;
+      width: $MagicNumber;
+      height: $MagicNumber;
+      left: 5vw;
+      span {
+        background-color: $colorRed;
+        display: block;
+        position: absolute;
+        height: $MagicNumber/1;
+        width: $MagicNumber/20;
+        transition: transform 100ms;
+
+        &:first-child {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+        }
+      }
+      &:hover {
+        span {
+          &:first-child {
+            transform: rotate(40deg);
+          }
+          &:nth-child(2) {
+            transform: rotate(-50deg);
+          }
+        }
+      }
+    }
+  }
+}
