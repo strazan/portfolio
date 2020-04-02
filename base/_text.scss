@@ -1,14 +1,16 @@
+@import './color.scss';
 @import url('https://rsms.me/inter/inter.css');
 
 $fontSizeNormal: 18px;
 $fontSizeLarge: 22px;
+$fontSize2XL: 45px;
 $fontSize4XL: 108px;
 
 @mixin fontSizeLarge {
   font-size: $fontSizeLarge;
-  //   @media screen and (max-width: 1200px) {
-  //     font-size: 9vw;
-  //   }
+}
+@mixin fontSize2XL {
+  font-size: $fontSize2XL;
 }
 @mixin fontSize4XL {
   font-size: $fontSize4XL;
@@ -20,21 +22,40 @@ $fontSize4XL: 108px;
 @mixin fontSizeNormal {
   font-size: $fontSizeNormal;
   font-weight: 300;
-  //   @media screen and (max-width: 1200px) {
-  //     font-size: 2vw;
-  //   }
 }
 @mixin fontSizeNormalFat {
   @include fontSizeNormal;
   font-weight: 800;
-  //   @media screen and (max-width: 1200px) {
-  //     font-size: 2vw;
-  //   }
 }
 
 @mixin interFont {
   font-family: 'Inter', sans-serif;
   @supports (font-variation-settings: normal) {
     font-family: 'Inter var', sans-serif;
+  }
+}
+
+@mixin redStrokeFont {
+  @include interFont;
+  color: transparent;
+  -webkit-text-stroke: 2px $colorRed;
+}
+
+@mixin fillRedOnHover {
+  color: transparent;
+  background-position: 0 0;
+  line-height: 1;
+  font-weight: 600;
+  color: transparent;
+  transition: all 600ms;
+  -webkit-text-stroke: 2px $colorRed;
+  background-image: -webkit-linear-gradient(top, $colorWhite 50%, $colorRed 0);
+  background-size: 100% 200%;
+  //   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  &:hover {
+    background-position: 0 100%;
+    text-decoration: none;
   }
 }
