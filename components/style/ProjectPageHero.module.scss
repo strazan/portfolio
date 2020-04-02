@@ -21,7 +21,8 @@
     }
   }
   .name {
-    @include fontSizeLarge;
+    @include fontSize4XL;
+    color: $colorRed;
   }
   .role {
     margin-top: -$MagicNumber3;

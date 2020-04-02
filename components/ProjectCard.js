@@ -1,15 +1,13 @@
 import style from './style/ProjectCard.module.scss'
 import Link from 'next/link'
 
-const ProjectCard = ({ blok }) => {
-  console.log(blok)
-  const { content } = blok
+const ProjectCard = ({ blok, url }) => {
   return (
     <div className={style.root}>
-      <Link href={`/${blok.full_slug}`}>
+      <Link href={`/${url}`}>
         <a>
-          <h1>{content.projectName}</h1>
-          <h4>{content.projectSubTitle}</h4>
+          <h1>{blok.title}</h1>
+          <img src={blok.image} alt="" />
         </a>
       </Link>
     </div>
