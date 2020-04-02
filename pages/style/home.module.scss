@@ -1,0 +1,14 @@
+.featuredIntro,
+.moreProjects {
+  width: 100%;
+  padding: 10vh 20vw 10vh 40vw;
+}
+.featuredIntro p {
+  width: 10rem;
+}
+.FeaturedProjectsGrid {
+  display: flex;
+}
+.column {
+  width: 50%;
+}
