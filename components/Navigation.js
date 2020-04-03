@@ -66,6 +66,11 @@ const Navigation = ({ isHiddenOnStart }) => {
                   <a>About</a>
                 </Link>
               </li>
+              <li onClick={() => setIsMenuShowing(false)}>
+                <Link href="/about">
+                  <a>Contact</a>
+                </Link>
+              </li>
             </ul>
           </nav>
           <div

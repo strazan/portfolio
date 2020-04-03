@@ -4,7 +4,7 @@
   .footerNav {
     background-color: #fff;
     bottom: 0;
-    border-top: 2px solid $colorRed;
+    border-top: 1px solid $colorRed;
     position: fixed;
     transition: transform 300ms;
     width: 100vw;
@@ -20,7 +20,7 @@
 
         button {
           @include fontSizeLarge;
-          font-weight: 600;
+          font-weight: 400;
           color: $colorRed;
           border: none;
           background-color: transparent;
@@ -54,7 +54,7 @@
       }
       .menuButton {
         max-width: 30%;
-        border-right: 2px solid $colorRed;
+        border-right: 1px solid $colorRed;
       }
     }
   }
@@ -79,7 +79,7 @@
             @include interFont;
             color: transparent;
             background-position: 0 0;
-            font-size: 12vw;
+            font-size: 10vw;
             line-height: 1;
             font-weight: 600;
             color: transparent;
