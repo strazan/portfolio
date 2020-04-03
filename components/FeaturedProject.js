@@ -1,8 +1,15 @@
 import style from './style/FeaturedProject.module.scss'
+import { useEffect } from 'react'
 
 const FeaturedProject = ({ blok }) => {
   return (
-    <div className={style.root}>
+    <div
+      data-tilt
+      data-tilt-max="10"
+      data-tilt-speed="100"
+      data-tilt-reverse="true"
+      className={style.root}
+    >
       <div className={style.imageWrapper}>
         <img src={blok.image} alt="" />
       </div>
