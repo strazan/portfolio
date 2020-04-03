@@ -11,7 +11,7 @@
     left: 0;
 
     object-fit: contain;
-    transition: all 300ms ease;
+    transition: all 150ms ease;
     overflow: hidden;
     box-shadow: $MagicNumber/4 $MagicNumber/4 $MagicNumber
       rgba($colorBlack, 0.4);
@@ -20,6 +20,7 @@
       display: block;
       width: 100%;
       height: 100%;
+      transition: all 150ms ease;
     }
   }
   .projectName {
@@ -34,6 +35,9 @@
   &:hover {
     .imageWrapper {
       border: $MagicNumber/6 solid $colorRed;
+      img {
+        transform: scale(1.1);
+      }
     }
   }
 }

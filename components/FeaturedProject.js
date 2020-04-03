@@ -6,7 +6,7 @@ const FeaturedProject = ({ blok }) => {
     <div
       data-tilt
       data-tilt-max="10"
-      data-tilt-speed="100"
+      data-tilt-speed="300"
       data-tilt-reverse="true"
       className={style.root}
     >
