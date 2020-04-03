@@ -37,8 +37,8 @@ const MeHero = props => {
 
       if (textOne.current && textTwo.current && textThree.current) {
         textOne.current.style.marginLeft = `-${scrollTop / 12}vw`
-        textTwo.current.style.marginLeft = `calc(-40vw + ${scrollTop / 8}vw)`
-        textThree.current.style.marginLeft = `calc(10vw - ${scrollTop / 5}vw)`
+        textTwo.current.style.marginLeft = `calc(-60vw + ${scrollTop / 8}vw)`
+        textThree.current.style.marginLeft = `calc(8vw - ${scrollTop / 5}vw)`
       }
     })
   }, [])
@@ -52,16 +52,16 @@ const MeHero = props => {
           <h1
             ref={textTwo}
             className={style.titleFilled}
-            style={{ marginLeft: '-40vw' }}
+            style={{ marginLeft: '-60vw' }}
           >
-            I AM PHOTOGRAPHER
+            I AM SUCH VERY HACKER
           </h1>
           <h1
             ref={textThree}
             className={style.title}
-            style={{ marginLeft: '10vw' }}
+            style={{ marginLeft: '8vw' }}
           >
-            ALSO AM PROFESSIONAL HACKER
+            ALSO AM PROFESSIONAL PHOTOGRAPHER
           </h1>
         </div>
       </div>
@@ -74,9 +74,6 @@ const MeHero = props => {
           <div className={style.line}></div>
         </div>
       </div>
-      {/* </div> */}
-
-      {/* <div className="projects"><ProjectCardVertical /></div> */}
     </div>
   )
 }
