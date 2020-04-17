@@ -7,7 +7,8 @@ const Head = ({ title, description }) => (
     <meta name="description" content={description || ''} />
     <meta name="viewport" content="width=device-width, inititial-scale=1" />
     <link rel="stylesheet" href="https://use.typekit.net/iqb0dfb.css" />
-    {}
+
+    {/* <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> */}
   </NextHead>
 )
 
