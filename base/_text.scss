@@ -3,6 +3,7 @@
 
 $fontSizeNormal: 18px;
 $fontSizeLarge: 22px;
+$fontSizeXL: 30px;
 $fontSize2XL: 45px;
 $fontSize4XL: 108px;
 
@@ -11,6 +12,9 @@ $fontSize4XL: 108px;
 }
 @mixin fontSize2XL {
   font-size: $fontSize2XL;
+}
+@mixin fontSizeXL {
+  font-size: $fontSizeXL;
 }
 @mixin fontSize4XL {
   font-size: $fontSize4XL;

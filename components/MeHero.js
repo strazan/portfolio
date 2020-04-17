@@ -2,13 +2,13 @@ import style from './style/MeHero.module.scss'
 
 import React, { useEffect, useRef } from 'react'
 
-const MeHero = props => {
+const MeHero = (props) => {
   const scroll = useRef()
   const textOne = useRef()
   const textTwo = useRef()
   const textThree = useRef()
   useEffect(() => {
-    window.addEventListener('wheel', e => {
+    window.addEventListener('scroll', (e) => {
       let scrollTop =
         window.pageYOffset !== undefined
           ? window.pageYOffset
@@ -25,7 +25,7 @@ const MeHero = props => {
     })
   }, [])
   useEffect(() => {
-    window.addEventListener('wheel', e => {
+    window.addEventListener('scroll', (e) => {
       let scrollTop =
         window.pageYOffset !== undefined
           ? window.pageYOffset
