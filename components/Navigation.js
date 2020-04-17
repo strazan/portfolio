@@ -12,7 +12,7 @@ const Navigation = ({ isHiddenOnStart }) => {
   useEffect(() => {
     if (isHiddenOnStart) {
       footerNav.current.style.transform = 'translateY(62px)'
-      window.addEventListener('wheel', e => {
+      window.addEventListener('wheel', (e) => {
         let scrollTop =
           window.pageYOffset !== undefined
             ? window.pageYOffset
@@ -38,7 +38,12 @@ const Navigation = ({ isHiddenOnStart }) => {
             <button onClick={() => setIsMenuShowing(true)}>Menu</button>
           </li>
           <li>
-            <button>Contact me now</button>
+            <Link href="/contact">
+              <a>
+                {' '}
+                <button>Contact me now</button>
+              </a>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -67,7 +72,7 @@ const Navigation = ({ isHiddenOnStart }) => {
                 </Link>
               </li>
               <li onClick={() => setIsMenuShowing(false)}>
-                <Link href="/about">
+                <Link href="/contact">
                   <a>Contact</a>
                 </Link>
               </li>
