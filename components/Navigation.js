@@ -3,6 +3,7 @@ import style from './style/Navigation.module.scss'
 import React, { useEffect, useRef, useState } from 'react'
 
 import Link from 'next/link'
+import Router from 'next/router'
 
 const Navigation = ({ isHiddenOnStart }) => {
   const footerNav = useRef()
@@ -35,7 +36,14 @@ const Navigation = ({ isHiddenOnStart }) => {
       <nav ref={footerNav} className={style.footerNav}>
         <ul>
           <li className={style.menuButton}>
-            <button onClick={() => setIsMenuShowing(true)}>Menu</button>
+            <button
+              onClick={() => {
+                setIsMenuShowing(true)
+                Router.router.push({ pathname: '/menu' })
+              }}
+            >
+              Menu
+            </button>
           </li>
           <li>
             <Link href="/contact">
@@ -47,7 +55,7 @@ const Navigation = ({ isHiddenOnStart }) => {
           </li>
         </ul>
       </nav>
-      {isMenuShowing ? (
+      {/* {isMenuShowing ? (
         <div ref={navigationMenu} className={style.navigationMenuWrapper}>
           <nav className={style.navigationMenu}>
             <ul>
@@ -88,7 +96,7 @@ const Navigation = ({ isHiddenOnStart }) => {
         </div>
       ) : (
         ''
-      )}
+      )} */}
     </div>
   )
 }
