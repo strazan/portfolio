@@ -6,34 +6,59 @@ import ProjectCard from '../components/ProjectCard'
 
 import Swiper from 'react-id-swiper'
 import React, { useEffect, useState } from 'react'
+import Router from 'next/router'
+import MainContent from '../components/MainContent'
 
-const WorkPage = props => {
+const WorkPage = (props) => {
   const [filters, setFilters] = useState([
     { text: 'All', isActive: true },
-    { text: 'Websites', isActive: false },
-    { text: 'Multimedia', isActive: false }
+    { text: 'Development' },
+    { text: 'Multimedia' },
   ])
 
   const {
-    data: { stories }
+    data: { stories },
   } = props
 
-  const swiperParams = {
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    loop: true
-  }
+  const [projects, setProjects] = useState(stories)
+  // const swiperParams = {
+  //   slidesPerView: 'auto',
+  //   centeredSlides: true,
+  //   loop: true,
+  // }
 
-  const setActiveFilters = text => {
+  const setActiveFilters = (text) => {
+    Router.push({ pathname: '/work', query: { filter: text } })
+
     setFilters(
-      filters.map(filter => {
+      filters.map((filter) => {
         return {
           text: filter.text,
-          isActive: filter.text === text ? true : false
+          isActive: filter.text === text ? true : false,
         }
       })
     )
   }
+
+  useEffect(() => {
+    Router.events.on('routeChangeComplete', (url) => {
+      setProjects(
+        stories.filter((item) => {
+          // for (var key in Router.router.query) {
+          //   if (
+          //     item.content.body[2].type[key] === undefined ||
+          //     item.content.body[2].type[key] != Router.router.query[key]
+          //   )
+          //     return false
+          // }
+          // return true
+          return item.content.body[2].filter.includes(
+            Router.router.query.filter
+          )
+        })
+      )
+    })
+  }, [])
 
   return (
     <Layout>
@@ -58,29 +83,19 @@ const WorkPage = props => {
             )
           })}
         </div>
-        <Swiper {...swiperParams} className={style.projects}>
-          {stories.map(project => {
-            const active = filters.filter(f => f.isActive)[0].text
-            // console.log(active)
-            console.log(project.content.body[2].type)
-            // .type.indexOf(active))
 
-            return project.content.body[2].type.indexOf(active) > -1 ? (
-              <div
-                key={project.id}
-                style={{ flexShrink: '1 !important' }}
-                className={style.swiperSlide}
-              >
+        <MainContent>
+          <div className={style.projects}>
+            {projects.map((project) => {
+              return (
                 <ProjectCard
                   blok={project.content.body[2]}
                   url={project.full_slug}
                 />
-              </div>
-            ) : (
-              <div style={{ display: 'none' }}></div>
-            )
-          })}
-        </Swiper>
+              )
+            })}
+          </div>
+        </MainContent>
       </div>
     </Layout>
   )

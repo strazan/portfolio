@@ -10,19 +10,19 @@ import Link from 'next/link'
 import VanillaTilt from 'vanilla-tilt'
 import { useEffect, useRef } from 'react'
 
-const IndexPage = props => {
+const IndexPage = (props) => {
   const projects = useRef()
 
   const {
     data: {
-      content: { block }
-    }
+      content: { block },
+    },
   } = props
 
   useEffect(() => {
     VanillaTilt.init('', {
       max: 5,
-      speed: 400
+      speed: 400,
     })
   }, [props])
   return (
@@ -35,12 +35,12 @@ const IndexPage = props => {
           className={style.FeaturedProjectsGrid}
         >
           <div className={style.column} style={{ paddingTop: '4rem' }}>
-            {block[0].columnOne.map(feat => {
+            {block[0].columnOne.map((feat) => {
               return <FeaturedProject key={feat._uid} blok={feat} />
             })}
           </div>
           <div className={style.column}>
-            {block[0].columnTwo.map(feat => {
+            {block[0].columnTwo.map((feat) => {
               return <FeaturedProject key={feat._uid} blok={feat} />
             })}
           </div>
