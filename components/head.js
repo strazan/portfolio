@@ -4,6 +4,19 @@ const Head = ({ title, description }) => (
   <NextHead>
     <meta charSet="UTF-8" />
     <title>{title || ''}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/icon32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/icon32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/icon32.png"
+    />
     <meta name="description" content={description || ''} />
     <meta name="viewport" content="width=device-width, inititial-scale=1" />
     <link rel="stylesheet" href="https://use.typekit.net/iqb0dfb.css" />
