@@ -12,12 +12,16 @@
   }
 
   .info {
-    padding: $MagicNumber * 2 0 0 $MagicNumber * 2;
+    padding: $MagicNumber/2 0 0 $MagicNumber * 2;
 
     .description {
-      @include fontSizeNormal;
-      color: $colorGray;
       padding-bottom: $MagicNumber / 1.25;
+
+      p {
+        @include fontSizeNormal;
+        color: $colorGray;
+        padding-bottom: $MagicNumber / 4;
+      }
     }
 
     .infoSection {
@@ -35,6 +39,8 @@
 
     .link {
       @include fontSizeNormal;
+      color: #01f;
+      text-decoration: underline;
     }
   }
 }

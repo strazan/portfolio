@@ -1,20 +1,29 @@
 import style from './style/ProjectShowcase.module.scss'
 
-const ProjectShowcase = ({ content }) => {
-  console.log(content)
+import Link from 'next/link'
 
+const ProjectShowcase = ({ content }) => {
   return (
     <div className={style.root}>
       <img className={style.mockup} src={content.mockup} alt="" />
       <div className={style.info}>
-        <p className={style.description}>{content.description}</p>
-        {content.info.map((section) => {
+        <div className={style.description}>
+          {content.description.split('BREAK').map((p, i) => {
+            return <p key={i}>{p}</p>
+          })}
+        </div>
+
+        {content.info.map((section, i) => {
           return (
-            <div className={style.infoSection}>
+            <div key={i} className={style.infoSection}>
               <h6 className={style.title}>{section.title}</h6>
               {section.title.toLowerCase() === 'stack' ? (
-                section.copy.split('#').map((stack) => {
-                  return <p className={style.copy}>{stack}</p>
+                section.copy.split('#').map((stack, i) => {
+                  return (
+                    <p key={i} className={style.copy}>
+                      {stack}
+                    </p>
+                  )
                 })
               ) : (
                 <p className={style.copy}>{section.copy}</p>
@@ -22,7 +31,7 @@ const ProjectShowcase = ({ content }) => {
             </div>
           )
         })}
-        <a className={style.link} href={content ? content.url : ''}>
+        <a className={style.link} href={content.url ? content.url.url : ''}>
           {content.url ? 'Visit site' : ''}
         </a>
       </div>
