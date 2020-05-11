@@ -1,7 +1,9 @@
 import style from './style/FeaturedProject.module.scss'
 import { useEffect } from 'react'
 
+import Link from 'next/link'
 const FeaturedProject = ({ blok }) => {
+  console.log(blok)
   return (
     <div
       data-tilt
@@ -10,11 +12,15 @@ const FeaturedProject = ({ blok }) => {
       data-tilt-reverse="true"
       className={style.root}
     >
-      <div className={style.imageWrapper}>
-        <img src={blok.image} alt="" />
-      </div>
-      <h2 className={style.projectName}>{blok.projectName}</h2>
-      <h3 className={style.projectRole}>{blok.projectRole}</h3>
+      <Link href={blok.link.cached_url}>
+        <a>
+          <div className={style.imageWrapper}>
+            <img src={blok.image} alt="" />
+          </div>
+          <h2 className={style.projectName}>{blok.projectName}</h2>
+          <h3 className={style.projectRole}>{blok.projectRole}</h3>
+        </a>
+      </Link>
     </div>
   )
 }
