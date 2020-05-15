@@ -25,6 +25,7 @@ const IndexPage = (props) => {
       speed: 400,
     })
   }, [props])
+
   return (
     <Layout settings={{ hiddenNav: true }}>
       <MeHero />
