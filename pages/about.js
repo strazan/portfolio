@@ -1,4 +1,4 @@
-import { fetcher, url } from '../utils/util'
+import { fetcher, url } from '../../utils/util'
 import AppearancesRow from '../components/AppearancesRow'
 import Layout from '../components/Layout'
 import MainContent from '../components/MainContent'
