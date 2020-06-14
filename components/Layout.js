@@ -7,9 +7,9 @@ const Layout = ({ settings, children }) => {
   return (
     <div>
       <Head title="siggeme" />
-      <Navigation
+      {/* <Navigation
         isHiddenOnStart={settings && settings.hiddenNav ? true : false}
-      />
+      /> */}
       <div className={style.Layout}>
         <main>{children}</main>
       </div>

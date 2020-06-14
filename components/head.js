@@ -2,7 +2,7 @@ import NextHead from 'next/head'
 
 const Head = ({ title, description }) => (
   <NextHead>
-    <script
+    {/* <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-152603515-3"
     ></script>
@@ -10,7 +10,7 @@ const Head = ({ title, description }) => (
       window.dataLayer = window.dataLayer || []; function gtag()
       {dataLayer.push(arguments)}
       gtag('js', new Date()); gtag('config', 'UA-152603515-3');
-    </script>
+    </script> */}
 
     <meta charSet="UTF-8" />
     <title>{title || ''}</title>

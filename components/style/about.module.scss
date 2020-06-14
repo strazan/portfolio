@@ -1,5 +1,7 @@
 @import '../../base/index.scss';
-
+.about {
+  padding-top: $MagicNumber;
+}
 .title,
 .subTitle {
   color: #ff4438;
@@ -13,22 +15,31 @@
   display: flex;
 
   //   .text,
-  .image {
+  .imageWrapper {
     width: 40%;
+    height: fit-content;
+
+    .image {
+      padding-left: $MagicNumber / 3;
+      height: auto;
+      min-height: 100%;
+      max-width: 100%;
+    }
   }
+
   .text {
     @include fontSize2XL;
     font-weight: 300;
     width: 60%;
     padding: $MagicNumber / 2 0;
   }
-}
 
-.copy {
-  font-size: 1.4rem;
-  color: #224;
-}
+  .copy {
+    font-size: 1.4rem;
+    color: #224;
+  }
 
-.appearancesRows {
-  padding-bottom: $MagicNumber * 2;
+  .appearancesRows {
+    padding-bottom: $MagicNumber * 2;
+  }
 }

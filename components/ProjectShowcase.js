@@ -5,7 +5,9 @@ import Link from 'next/link'
 const ProjectShowcase = ({ content }) => {
   return (
     <div className={style.root}>
-      <img className={style.mockup} src={content.mockup} alt="" />
+      <div className={style.mockupWrapper}>
+        <img className={style.mockup} src={content.mockup} alt="" />
+      </div>
       <div className={style.info}>
         <div className={style.description}>
           {content.description.split('BREAK').map((p, i) => {

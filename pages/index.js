@@ -9,10 +9,11 @@ import Link from 'next/link'
 
 import VanillaTilt from 'vanilla-tilt'
 import { useEffect, useRef } from 'react'
+import About from '../components/About'
 
 const IndexPage = (props) => {
   const projects = useRef()
-
+  // console.log(props)
   const {
     data: {
       content: { block },
@@ -29,6 +30,7 @@ const IndexPage = (props) => {
   return (
     <Layout settings={{ hiddenNav: true }}>
       <MeHero />
+      <About about={props.about} />
       <MainContent>
         <div
           ref={projects}
@@ -40,18 +42,6 @@ const IndexPage = (props) => {
               return <FeaturedProject key={feat._uid} blok={feat} />
             })}
           </div>
-          <div className={style.column}>
-            {block[0].columnTwo.map((feat) => {
-              return <FeaturedProject key={feat._uid} blok={feat} />
-            })}
-          </div>
-        </div>
-        <div className={style.moreProjects}>
-          <Link href="/work">
-            <a>
-              All projects <span className={style.arrow}>⭢</span>
-            </a>
-          </Link>
         </div>
       </MainContent>
     </Layout>
@@ -59,6 +49,8 @@ const IndexPage = (props) => {
 }
 export const getServerSideProps = async () => {
   const data = await fetcher(`${url}/api/page/home`)
-  return { props: { data } }
+  const about = await fetcher(`${url}/api/page/about`)
+
+  return { props: { data, about } }
 }
 export default IndexPage

@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 
 import Link from 'next/link'
 const FeaturedProject = ({ blok }) => {
-  console.log(blok)
   return (
     <div
       data-tilt

@@ -6,14 +6,25 @@
   padding-top: $MagicNumber;
   padding-bottom: $MagicNumber * 2;
 
-  .mockup {
-    width: 55%;
+  .mockupWrapper {
     box-shadow: 0.5rem 0.5rem 2rem rgba($colorBlack, 0.3);
+    width: 50%;
+    height: fit-content;
+
+    .mockup {
+      width: auto;
+      min-height: 100%;
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 45%;
+    }
   }
 
   .info {
     padding: $MagicNumber/2 0 0 $MagicNumber * 2;
-
+    width: 50%;
     .description {
       padding-bottom: $MagicNumber / 1.25;
 
@@ -41,6 +52,24 @@
       @include fontSizeNormal;
       color: #01f;
       text-decoration: underline;
+    }
+
+    @media screen and (max-width: 1300px) {
+      padding: $MagicNumber/2 0 0 $MagicNumber;
+    }
+    @media screen and (max-width: 1200px) {
+      padding: $MagicNumber/4 0 0 $MagicNumber/2;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    flex-direction: column-reverse;
+
+    .mockupWrapper,
+    .info {
+      width: 100%;
+    }
+    .info {
+      padding: 0 $MagicNumber/4 $MagicNumber/2 $MagicNumber/4;
     }
   }
 }

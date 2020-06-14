@@ -5,27 +5,36 @@ $fontSizeNormal: 18px;
 $fontSizeLarge: 22px;
 $fontSizeXL: 30px;
 $fontSize2XL: 45px;
-$fontSize4XL: 108px;
+$fontSize4XL: 102px;
 
 @mixin fontSizeLarge {
   font-size: $fontSizeLarge;
 }
 @mixin fontSize2XL {
   font-size: $fontSize2XL;
+  @media screen and (max-width: 1100px) {
+    font-size: 4vw;
+  }
 }
 @mixin fontSizeXL {
   font-size: $fontSizeXL;
 }
 @mixin fontSize4XL {
   font-size: $fontSize4XL;
-  @media screen and (max-width: 1200px) {
-    font-size: 9vw;
+  @media screen and (max-width: 1500px) {
+    font-size: 7vw;
   }
 }
 
 @mixin fontSizeNormal {
   font-size: $fontSizeNormal;
   font-weight: 300;
+  @media screen and (max-width: 1200px) {
+    font-size: 1.5vw;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 2vh;
+  }
 }
 @mixin fontSizeNormalFat {
   @include fontSizeNormal;
