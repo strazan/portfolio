@@ -34,6 +34,7 @@ const AboutPage = ({ about }) => {
             and I think my ability to see shape and color gives me an edge in
             web design.
           </p>
+          <br />
           <p className={style.copy}>sigge@labor.cool</p>
           <p className={style.copy}>+46724494740</p>
           <h3 className={style.subTitle}>hacks</h3>
@@ -70,6 +71,8 @@ const AboutPage = ({ about }) => {
               )
             })}
           </div>
+
+          <h3 className={style.subTitle}>projects</h3>
         </MainContent>
       </Layout>
     </div>

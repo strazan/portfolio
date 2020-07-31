@@ -37,7 +37,7 @@ const IndexPage = (props) => {
           id="projjectss"
           className={style.FeaturedProjectsGrid}
         >
-          <div className={style.column} style={{ paddingTop: '4rem' }}>
+          <div className={style.column}>
             {block[0].columnOne.map((feat) => {
               return <FeaturedProject key={feat._uid} blok={feat} />
             })}

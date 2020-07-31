@@ -7,7 +7,7 @@
   color: #ff4438;
 }
 .subTitle {
-  font-size: 1.5rem;
+  @include fontSizeXL;
   padding: $MagicNumber / 2 0 $MagicNumber / 6 0;
 }
 
@@ -34,12 +34,11 @@
     padding: $MagicNumber / 2 0;
   }
 
-  .copy {
-    font-size: 1.4rem;
-    color: #224;
-  }
-
   .appearancesRows {
     padding-bottom: $MagicNumber * 2;
   }
+}
+.copy {
+  @include fontSizeLarge;
+  color: #224;
 }
