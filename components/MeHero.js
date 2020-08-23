@@ -36,8 +36,8 @@ const MeHero = (props) => {
             ).scrollTop
 
       if (textOne.current && textTwo.current && textThree.current) {
-        textOne.current.style.marginLeft = `-${scrollTop / 12}vw`
-        textTwo.current.style.marginLeft = `calc(-60vw + ${scrollTop / 8}vw)`
+        textOne.current.style.marginLeft = `-${scrollTop / 10}vw`
+        textTwo.current.style.marginLeft = `calc(-40vw + ${scrollTop / 7}vw)`
         textThree.current.style.marginLeft = `calc(8vw - ${scrollTop / 5}vw)`
       }
     })
@@ -52,16 +52,16 @@ const MeHero = (props) => {
           <h1
             ref={textTwo}
             className={style.titleFilled}
-            style={{ marginLeft: '-60vw' }}
+            style={{ marginLeft: '-40vw' }}
           >
-            I AM SUCH VERY HACKER
+            I CREATE WITH CODE
           </h1>
           <h1
             ref={textThree}
             className={style.title}
             style={{ marginLeft: '8vw' }}
           >
-            ALSO AM PROFESSIONAL PHOTOGRAPHER
+            I'M EXPENSIVE AND AWESOME
           </h1>
         </div>
       </div>
