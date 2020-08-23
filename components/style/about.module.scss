@@ -13,6 +13,7 @@
 
 .intro {
   display: flex;
+  align-items: center;
 
   //   .text,
   .imageWrapper {
@@ -36,6 +37,35 @@
 
   .appearancesRows {
     padding-bottom: $MagicNumber * 2;
+  }
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column-reverse;
+
+    .imageWrapper {
+      width: 100vw;
+      height: 30vh;
+      overflow: hidden;
+      object-position: center;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+
+      .image {
+        padding: 0;
+        // margin-left: -$MagicNumber/3;
+        width: 100vw;
+        height: auto;
+      }
+    }
+    .text {
+      width: 100%;
+    }
+  }
+}
+.hack {
+  @media screen and (max-width: 1060px) {
+    padding-bottom: $MagicNumber/6;
   }
 }
 .copy {

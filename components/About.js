@@ -85,16 +85,16 @@ const AboutPage = ({ about }) => {
 
 export const Hack = ({ year, title, href, desc }) => {
   return (
-    <div>
+    <div className={style.hack}>
       <a
         className={style.copy}
-        style={{ display: 'inline-block', color: '#01f', paddingRight: '10px' }}
+        style={{ display: 'inline', color: '#01f', paddingRight: '10px' }}
         href={href}
       >
         {title}
       </a>
-      <p style={{ display: 'inline-block' }} className={style.copy}>
-        {` -  ${desc}`}
+      <p style={{ display: 'inline' }} className={style.copy}>
+        {`-  ${desc}`}
       </p>
     </div>
   )
