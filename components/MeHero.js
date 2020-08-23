@@ -7,6 +7,7 @@ const MeHero = (props) => {
   const textOne = useRef()
   const textTwo = useRef()
   const textThree = useRef()
+
   useEffect(() => {
     window.addEventListener('scroll', (e) => {
       let scrollTop =
@@ -24,6 +25,7 @@ const MeHero = (props) => {
       }
     })
   }, [])
+
   useEffect(() => {
     window.addEventListener('scroll', (e) => {
       let scrollTop =
@@ -42,6 +44,7 @@ const MeHero = (props) => {
       }
     })
   }, [])
+
   return (
     <div className={style.root}>
       <div className={style.heroTextWrapper}>

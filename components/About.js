@@ -1,4 +1,3 @@
-import { fetcher, url } from '../utils/util'
 import AppearancesRow from './AppearancesRow'
 import Layout from './Layout'
 import MainContent from './MainContent'
@@ -6,7 +5,6 @@ import MainContent from './MainContent'
 import style from './style/about.module.scss'
 
 const AboutPage = ({ about }) => {
-  console.log(about.content.block)
   const {
     content: { block },
   } = about
@@ -78,10 +76,6 @@ const AboutPage = ({ about }) => {
     </div>
   )
 }
-// export const getServerSideProps = async () => {
-
-//   return { props: { data } }
-// }
 
 export const Hack = ({ year, title, href, desc }) => {
   return (

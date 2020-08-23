@@ -1,7 +1,7 @@
 import style from './style/FeaturedProject.module.scss'
-import { useEffect } from 'react'
 
 import Link from 'next/link'
+
 const FeaturedProject = ({ blok }) => {
   return (
     <div

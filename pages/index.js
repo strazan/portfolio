@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 import MeHero from '../components/MeHero'
 import FeaturedProject from '../components/FeaturedProject'
 import MainContent from '../components/MainContent'
-import Link from 'next/link'
 
 import VanillaTilt from 'vanilla-tilt'
 import { useEffect, useRef } from 'react'
@@ -13,7 +12,7 @@ import About from '../components/About'
 
 const IndexPage = (props) => {
   const projects = useRef()
-  // console.log(props)
+
   const {
     data: {
       content: { block },

@@ -1,7 +1,5 @@
 import style from './style/ProjectShowcase.module.scss'
 
-import Link from 'next/link'
-
 const ProjectShowcase = ({ content }) => {
   return (
     <div className={style.root}>

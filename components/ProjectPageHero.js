@@ -1,11 +1,6 @@
 import style from './style/ProjectPageHero.module.scss'
 
-import Link from 'next/link'
-import MainContent from './MainContent'
 const DevWork = ({ content }) => {
-  //   const {
-  //     body: { projectHero }
-  //   } = content
   return (
     <div className={style.root}>
       <img className={style.image} src={content.image} alt="" />

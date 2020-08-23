@@ -2,20 +2,19 @@ import { Storyblok } from '../../../../utils/StoryblokClient'
 
 export default async (req, res) => {
   const {
-    query: { slug }
+    query: { slug },
   } = req
   Storyblok.get(`cdn/stories/work/${slug}`, {})
-    .then(response => {
+    .then((response) => {
       const {
         data: {
-          story: { content }
-        }
+          story: { content },
+        },
       } = response
       const data = { content }
       res.status(200).json(data)
     })
-    .catch(error => {
-      console.log(error)
+    .catch((error) => {
       res.status(500).json(`${error.name}: ${error.message}`)
     })
 }
