@@ -64,7 +64,7 @@ const MeHero = (props) => {
             className={style.title}
             style={{ marginLeft: '8vw' }}
           >
-            I'M EXPENSIVE AND AWESOME
+            YOUR WISH IS MY COMMAND
           </h1>
         </div>
       </div>
