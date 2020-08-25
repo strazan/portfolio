@@ -36,7 +36,7 @@ $fontSize4XL: 102px;
     font-size: 1.5vw;
   }
   @media screen and (max-width: 1000px) {
-    font-size: 2vh;
+    font-size: $fontSizeNormal;
   }
 }
 @mixin fontSizeNormalFat {

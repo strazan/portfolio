@@ -35,10 +35,6 @@
     padding: $MagicNumber / 2 0;
   }
 
-  .appearancesRows {
-    padding-bottom: $MagicNumber * 2;
-  }
-
   @media screen and (max-width: 700px) {
     flex-direction: column-reverse;
 
@@ -63,12 +59,40 @@
     }
   }
 }
-.hack {
-  @media screen and (max-width: 1060px) {
-    padding-bottom: $MagicNumber/6;
-  }
-}
+
 .copy {
   @include fontSizeLarge;
+  font-weight: 300;
   color: #224;
+  a {
+    color: #01f;
+  }
+}
+
+.hack {
+  padding-bottom: $MagicNumber/10;
+  .hackCopy,
+  .title {
+    display: inline;
+    @include fontSizeLarge;
+  }
+  .hackCopy {
+    display: inline;
+    @include fontSizeLarge;
+    color: #224;
+  }
+  @media screen and (max-width: 1060px) {
+    padding-bottom: $MagicNumber/6;
+    .hackCopy {
+      display: block;
+      @include fontSizeNormal;
+    }
+
+    .hyphen {
+      display: none;
+    }
+    // a {
+    //   display: block;
+    // }
+  }
 }

@@ -13,27 +13,30 @@ const AboutPage = ({ about }) => {
     <div className={style.about}>
       <Layout>
         <MainContent>
-          <h1 className={style.title}>this is about me</h1>
-          <br />
-          <div className={style.intro}>
+          {/* <h1 className={style.title}>this is about me</h1> */}
+          {/* <br /> */}
+          {/* <div className={style.intro}>
             <h2 className={style.text}>
-              I am a multidisciplinary creator, with a focus on photography and
-              the web. I like to eat carrots and read books. Simultaneously.
-            </h2>
-            <div className={style.imageWrapper}>
+             
+            </h2> */}
+          {/* <div className={style.imageWrapper}>
               <img className={style.image} src="/me1-1.jpg" alt="" />
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
 
-          <h3 className={style.subTitle}>me</h3>
+          {/* <h3 className={style.subTitle}>me</h3>
           <p className={style.copy}>
-            I'm currently studying the Frontend Developer program @ Hyper
-            Island. Photography has been a big part of my life for many years
-            and I think my ability to see shape and color gives me an edge in
-            web design.
-          </p>
+            I like to design and develop stuff for the web.
+            <br />
+            Photography has been a big part of my life for many years and I
+            think my ability to see shape and color gives me an edge in web
+            design.
+          </p> */}
           <br />
-          <p className={style.copy}>sigge@labor.cool</p>
+          <p className={style.copy}>
+            {' '}
+            <a href="mailto:sigge@labor.cool">sigge@labor.cool</a>
+          </p>
           <p className={style.copy}>+46724494740</p>
           <h3 className={style.subTitle}>hacks</h3>
           <Hack
@@ -81,14 +84,15 @@ export const Hack = ({ year, title, href, desc }) => {
   return (
     <div className={style.hack}>
       <a
-        className={style.copy}
-        style={{ display: 'inline', color: '#01f', paddingRight: '10px' }}
+        className={style.title}
+        style={{ color: '#01f', paddingRight: '10px' }}
         href={href}
       >
         {title}
       </a>
-      <p style={{ display: 'inline' }} className={style.copy}>
-        {`-  ${desc}`}
+      <p className={style.hackCopy}>
+        <span className={style.hyphen}>- </span>
+        {`${desc}`}
       </p>
     </div>
   )

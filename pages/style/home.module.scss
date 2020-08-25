@@ -8,6 +8,9 @@
   width: 50%;
   margin: auto;
   padding-top: 0;
+  @media screen and (max-width: 900px) {
+    width: 40vh;
+  }
 }
 
 .moreProjects {

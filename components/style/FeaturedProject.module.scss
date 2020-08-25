@@ -24,6 +24,7 @@
     }
   }
   .projectName {
+    padding-top: $MagicNumber/6;
     font-weight: 300;
     margin: 0;
   }
@@ -31,6 +32,15 @@
     margin-top: -0.7rem;
     font-weight: 300;
     color: #999;
+  }
+
+  @media screen and (max-width: 900px) {
+    .projectName {
+      font-size: $fontSizeLarge * 0.9;
+    }
+    .projectRole {
+      @include fontSizeNormal;
+    }
   }
   &:hover {
     .imageWrapper {
