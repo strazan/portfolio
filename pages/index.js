@@ -38,6 +38,7 @@ const IndexPage = (props) => {
         >
           <div className={style.column}>
             {block[0].columnOne.map((feat) => {
+              console.log(feat)
               return <FeaturedProject key={feat._uid} blok={feat} />
             })}
           </div>

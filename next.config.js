@@ -1,5 +1,7 @@
 module.exports = {
-  env: {
-    STORYBLOK_API_TOKEN: process.env.STORYBLOK_API_TOKEN
-  }
+  build: {
+    env: {
+      STORYBLOK_API_TOKEN: process.env.STORYBLOK_API_TOKEN,
+    },
+  },
 }
