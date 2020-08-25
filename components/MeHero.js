@@ -64,7 +64,7 @@ const MeHero = (props) => {
             className={style.title}
             style={{ marginLeft: '8vw' }}
           >
-            YOUR WISH IS MY COMMAND
+            I'M OPEN FOR FREELANCE WORK
           </h1>
         </div>
       </div>
