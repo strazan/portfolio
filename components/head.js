@@ -7,11 +7,23 @@ const Head = ({ title, description }) => (
       src="https://www.googletagmanager.com/gtag/js?id=UA-152603515-3"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || []; function gtag()
-      {dataLayer.push(arguments)}
-      gtag('js', new Date()); gtag('config', 'UA-152603515-3');
+     
     </script> */}
 
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-152603515-3"
+    ></script>
+
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-152603515-3');`,
+      }}
+    />
     <meta charSet="UTF-8" />
     <title>{title || ''}</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/icon32.png" />
