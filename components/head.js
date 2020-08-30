@@ -40,6 +40,7 @@ const Head = ({ title, description }) => (
       href="/favicon/icon32.png"
     />
     <meta name="description" content={description || ''} />
+    <meta property="og:image" content="/cigge4-1.jpg" key="ogimage" />
     <meta name="viewport" content="width=device-width, inititial-scale=1" />
     <link rel="stylesheet" href="https://use.typekit.net/iqb0dfb.css" />
   </NextHead>
